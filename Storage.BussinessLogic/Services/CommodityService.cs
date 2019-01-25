@@ -13,7 +13,7 @@ namespace Storage.BussinessLogic.Services
         List<Commodity> GetList();
     }
 
-    class CommodityService : ICommodity
+   public class CommodityService : ICommodity
     {
         public List<Commodity> GetList()
         {

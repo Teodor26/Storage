@@ -197,6 +197,16 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Storage.BussinessLogic\Storage.BussinessLogic.csproj">
+      <Project>{E51325FE-7EDB-4FB8-97E8-52A20DB0784C}</Project>
+      <Name>Storage.BussinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Storage.Models\Storage.Models.csproj">
+      <Project>{612de9fd-9064-463f-8eee-fe49b6e576c9}</Project>
+      <Name>Storage.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
