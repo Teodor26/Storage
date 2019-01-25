@@ -46,5 +46,11 @@
     <Compile Include="Services\CommodityService.cs" />
     <Compile Include="Services\PurchaseService.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Storage.Models\Storage.Models.csproj">
+      <Project>{612DE9FD-9064-463F-8EEE-FE49B6E576C9}</Project>
+      <Name>Storage.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
