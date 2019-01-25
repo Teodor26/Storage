@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataModels\Arrival.cs" />
+    <Compile Include="DataModels\BaseFieldsForProduct.cs" />
     <Compile Include="DataModels\Commodity.cs" />
     <Compile Include="DataModels\Purchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

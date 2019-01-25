@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace Storage.Models.DataModels
 {
-    public class Purchase
+    public class Purchase:BaseFieldsForProduct
     {
-        public DateTime date = new DateTime();
-
-        public int GoodId { get; set; }
-
-        public int Amount { get; set; }
-
+       
     }
 }

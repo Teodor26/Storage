@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Storage.Models.DataModels
 {
-    public class Arrival : BaseFieldsForProduct
+  public abstract class BaseFieldsForProduct
     {
-                
+        public int GoodId { get; set; }
+
+        public int Amount { get; set; }
+
+        DateTime date = new DateTime();
     }
 }
