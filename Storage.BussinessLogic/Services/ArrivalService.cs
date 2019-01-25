@@ -9,12 +9,12 @@ namespace Storage.BussinessLogic.Services
 {
     public interface IArrival
     {
-        List<Arrival> GetArrivals();
+        List<Arrival> GetList();
     }
-    sealed class ArrivalService:IArrival
+    public class ArrivalService:IArrival
     {
         
-        List<Arrival> IArrival.GetArrivals()
+        List<Arrival> IArrival.GetList()
         {
             var arrivalList = new List<Arrival>
             {

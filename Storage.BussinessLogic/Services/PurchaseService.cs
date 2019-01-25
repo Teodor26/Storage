@@ -1,17 +1,14 @@
 ﻿using Storage.Models.DataModels;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Storage.BussinessLogic.Services
 {
-    public interface IPurchaseSevice
+    public interface IPurchase
     {
         List<Purchase> GetList();
     }
-    class PurchaseService : IPurchaseSevice
+    public class PurchaseService : IPurchase
     {
         public List<Purchase> GetList()
         {

@@ -41,8 +41,23 @@ namespace Storage.Controllers
             return Ok();
         }
 
-        
+        [HttpGet]
+        public IHttpActionResult Delete(int id)
+        {
 
+            var commodity = _commodityService.GetList();
+
+            return Ok(commodity);
+
+        }
+
+        //[HttpGet]
+
+        //public IHttpActionResult Edit(int id, Commodity commodity)
+        //{
+
+        //    if(!ModelState.IsReadOnly)
+        //}
 
     }
 }
