@@ -17,7 +17,21 @@ namespace Storage.BussinessLogic.Services
     {
         public List<Commodity> GetList()
         {
-           
+            var productList = new List<Commodity>
+            {
+                new Commodity
+                {
+                    Id = 1,
+                    Name = "Potatoes"
+                },
+                new Commodity
+                {
+                    Id =2,
+                    Name = "Apple"
+                }
+            };
+
+            return productList;
         }
     }
 }

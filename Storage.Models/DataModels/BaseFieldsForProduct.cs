@@ -12,6 +12,8 @@ namespace Storage.Models.DataModels
 
         public int Amount { get; set; }
 
-        DateTime date = new DateTime();
+        public DateTime date = new DateTime();
+
+
     }
 }
