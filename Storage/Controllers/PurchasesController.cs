@@ -23,13 +23,13 @@ namespace Storage.Controllers
         [HttpGet]
         public IHttpActionResult GetAll()
         {
-            var commodity = _purchaseService.GetList();
+            var purchase = _purchaseService.GetList();
 
-            return Ok(commodity);
+            return Ok(purchase);
         }
 
         [HttpPost]
-        public IHttpActionResult Add([FromBody]Arrival arrival)
+        public IHttpActionResult Add([FromBody]Purchase purchase)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -41,9 +41,9 @@ namespace Storage.Controllers
         public IHttpActionResult Delete(int id)
         {
 
-            var commodity = _purchaseService.GetList();
+            var purchase = _purchaseService.GetList();
 
-            return Ok(commodity);
+            return Ok(purchase);
 
         }
     }

@@ -23,9 +23,9 @@ namespace Storage.Controllers
         [HttpGet]
         public IHttpActionResult GetAll()
         {
-            var commodity = _arrivalService.GetList();
+            var arrival = _arrivalService.GetList();
 
-            return Ok(commodity);
+            return Ok(arrival);
         }
 
         [HttpPost]
@@ -41,9 +41,9 @@ namespace Storage.Controllers
         public IHttpActionResult Delete(int id)
         {
 
-            var commodity = _arrivalService.GetList();
+            var arrival = _arrivalService.GetList();
 
-            return Ok(commodity);
+            return Ok(arrival);
 
         }
 
