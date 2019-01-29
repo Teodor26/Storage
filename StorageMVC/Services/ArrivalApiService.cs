@@ -11,8 +11,11 @@ namespace Storage.Services
     {
         Task<List<Arrival>> GetList();
     }
-    public class ArrivalApiService:IArrivalApiService
+    public class ArrivalApiService : IArrivalApiService
     {
-
+        public Task<List<Arrival>> GetList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace StorageMVC.Controllers
 {
     public class ArrivalController : Controller
     {
-        private IArrivalApiService _arrivaApiService = new IArrivalApiService();
+        private IArrivalApiService _arrivaApiService = new ArrivalApiService();
         public ActionResult Index()
         {
             return View();

@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-
 namespace Storage.Services
 {
     public interface ICommodityApiSrvice
@@ -18,9 +17,9 @@ namespace Storage.Services
         {
             HttpClient client = new HttpClient();
 
-            string apiEndpoint = Properties.Settings.Default.ApiEndpoint;
+            string apiEndpoint = StorageMVC.Properties.Settings.Default.ApiEndpoint;
 
-            client.BaseAddress = new Uri("");
+            client.BaseAddress = new Uri("127.0.0.33");
 
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
@@ -28,7 +27,7 @@ namespace Storage.Services
 
                 List<Commodity> commodities = new List<Commodity>();
 
-            var response = await client.GetAsync("commodities");
+            var response = await client.GetAsync("/api/commodities");
 
             if(response.IsSuccessStatusCode)
             {

@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace Storage.BussinessLogic.Services
 {
-    public interface IPurchase
+    public interface IPurchaseService
     {
         List<Purchase> GetList();
     }
-    public class PurchaseService : IPurchase
+    public class PurchaseService : IPurchaseService
     {
         public List<Purchase> GetList()
         {

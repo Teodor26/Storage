@@ -6,57 +6,55 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Storage.Models.DataModels;
-
-
+using Storage.BusinessLogic.Services;
 
 namespace Storage.Controllers
 {
     public class CommoditiesController : ApiController
     {
 
-        private ICommodity _commodityService;
+        private readonly IProductService _commodityService;
 
 
         public CommoditiesController()
         {
-            _commodityService = new CommodityService();
+            _commodityService = new ProductService();
         }
 
         [HttpGet]
         public IHttpActionResult GetAll()
         {
-            var commodity = _commodityService.GetList();
+            var commodity = _commodityService.GetAll();
 
             return Ok(commodity);
         }
 
-        [HttpPost]
-        public IHttpActionResult Add([FromBody]Commodity commodity)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+        //[HttpPost]
+        //public IHttpActionResult Add([FromBody]Commodity commodity)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
 
-            if (string.IsNullOrEmpty(commodity.Name))
-                return BadRequest("Try again");
-            return Ok();
-        }
-
-        [HttpGet]
-        public IHttpActionResult Delete(int id)
-        {
-
-            var commodity = _commodityService.GetList();
-
-            return Ok(commodity);
-
-        }
+        //    if (string.IsNullOrEmpty(commodity.Name))
+        //        return BadRequest("Try again");
+        //    return Ok();
+        //}
 
         //[HttpGet]
+        //public IHttpActionResult Delete(int id)
+        //{
 
+        //    var commodity = _commodityService.GetAll();
+
+        //    return Ok(commodity);
+
+        //}
+
+        //[HttpGet]
         //public IHttpActionResult Edit(int id, Commodity commodity)
         //{
 
-        //    if(!ModelState.IsReadOnly)
+        //    if (!ModelState.IsReadOnly)
         //}
 
     }

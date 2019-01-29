@@ -12,7 +12,7 @@ namespace Storage.Controllers
     public class ArrivalsController : ApiController
     {
 
-        private IArrival _arrivalService;
+        private IArrivalService _arrivalService;
 
 
         public ArrivalsController()

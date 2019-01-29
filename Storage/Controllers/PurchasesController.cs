@@ -12,7 +12,7 @@ namespace Storage.Controllers
     public class PurchasesController : ApiController
     {
 
-        private IPurchase _purchaseService;
+        private IPurchaseService _purchaseService;
 
 
         public PurchasesController()

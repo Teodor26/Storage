@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Storage.BussinessLogic.Services
 {
-    public interface IArrival
+    public interface IArrivalService
     {
         List<Arrival> GetList();
     }
-    public class ArrivalService:IArrival
+    public class ArrivalService: IArrivalService
     {
         
-        List<Arrival> IArrival.GetList()
+        List<Arrival> IArrivalService.GetList()
         {
             var arrivalList = new List<Arrival>
             {

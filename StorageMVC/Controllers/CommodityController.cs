@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -11,11 +12,14 @@ namespace StorageMVC.Controllers
     public class CommodityController : Controller
     {
 
-        public ICommodityApiSrvice commodityApiSrvice = new CommodityApiSrvice();
+        public ICommodityApiSrvice _commodityApiSrvice = new CommodityApiService();
         // GET: Commodity
-        public ActionResult Index()
+
+            public async Task<ActionResult> List()
         {
-            return View();
+            var commodity = await _commodityApiSrvice.Getlist();
+            return View(commodity);
         }
+        
     }
 }
